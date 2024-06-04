@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333;
+    .contaner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 100px;
+        .card {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            background: var(--clr);
+            display: flex;
+            align-items: center;
+            font-size: 5em;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            transition: 0.1s;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/index.css">
+
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="contaner">
+      <div class="card" style="--clr:#ff6464">01</div>
+      <div class="card" style="--clr:#64c0ff">02</div>
+      <div class="card" style="--clr:#48e365">03</div>
+      <div class="card" style="--clr:#cb4af7">04</div>
+    </div>
+    <!-- Optional JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script>
+      let card = document.querySelectorAll('.card').forEach(
+        cards => {
+          cards.addEventListener('mousemove', (e) =>
+        {
+          let x = e.offsetX;
+          let y = e.offsetY;
+          let cardWidth = cards.clientWidth;
+          let cardHeight = cards.clientHeight;
+          let posX = (x - cardWidth/2);
+          let posY = (y - cardHeight/2);
+          cards.style.transform = `translateX(${posX}px) translateY(${posY}px)`;
+        })
+        cards.addEventListener('mouseout' , (e) => {
+          cards.style.transform = ``;
+        })
+        })
+    </script>
+
+  </body>
+</html>
